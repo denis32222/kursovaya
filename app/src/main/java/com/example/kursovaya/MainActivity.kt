@@ -7,9 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-var heads = 0
-var tails = 0
 class MainActivity : AppCompatActivity() {
+    var heads = 0
+    var tails = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,6 +37,14 @@ class MainActivity : AppCompatActivity() {
             tails = tails + 1
         }
         text_view.text = text
+        text_heads.text = "орлов: "+heads
+        text_tails.text = "орлов: "+tails
+    }
+    fun reset_count(view: View){
+        val text_heads = findViewById<TextView>(R.id.text_heads_count)
+        val text_tails = findViewById<TextView>(R.id.text_tails_count)
+        heads = 0
+        tails = 0
         text_heads.text = "орлов: "+heads
         text_tails.text = "орлов: "+tails
     }
