@@ -30,4 +30,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_tails_count"
+        android:layout_width="96dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="312dp"
+        android:text="решек: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_heads_count"
+        android:layout_width="96dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="269dp"
+        android:text="орлов: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

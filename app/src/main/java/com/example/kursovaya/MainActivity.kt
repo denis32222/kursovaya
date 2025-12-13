@@ -7,10 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+var heads = 0
+var tails = 0
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -22,14 +24,20 @@ class MainActivity : AppCompatActivity() {
 
     fun throw_coin(view: View){
         val text_view = findViewById<TextView>(R.id.current_coin_status)
+        val text_heads = findViewById<TextView>(R.id.text_heads_count)
+        val text_tails = findViewById<TextView>(R.id.text_tails_count)
         val coin_status = (0..1).random()
         val text: String
         if (coin_status == 1) {
             text = "орел"
+            heads = heads + 1
         }
         else{
             text = "решка"
+            tails = tails + 1
         }
         text_view.text = text
+        text_heads.text = "орлов: "+heads
+        text_tails.text = "орлов: "+tails
     }
 }
